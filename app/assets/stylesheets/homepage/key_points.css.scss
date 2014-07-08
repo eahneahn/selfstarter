@@ -1,6 +1,6 @@
 .big_wrapper {
-  border-bottom: 1px solid #d2d2d2;
-  background: #fff;
+
+  background: black;
 }
 .big_wrapper .wrapper {
   padding: 35px 0;
@@ -11,6 +11,12 @@
   h3 {
     margin: 20px 0 30px 0;
   }
+}
+
+h4{
+padding:5%;
+background: url(image_path("transparent3.png")) repeat; 
+line-height:1.3;
 }
 
 h3 {
@@ -25,25 +31,45 @@ h3 {
 }
 
 #one {
-  background: url(image_path("1-background.png")) no-repeat bottom left;
-  height: 320px;
+  background: url(image_path("1-background.png")) no-repeat bottom right;
+  height: 646px;
   width: 936px;
+  background-color:black;
 }
 
 #two {
-  background: url(image_path("2-background.png")) no-repeat bottom left;
-  height: 320px;
+  background: url(image_path("gang.jpg")) no-repeat bottom left;
+  height: 667px;
 }
 
 #three {
-  background: url(image_path("3-background.png")) no-repeat bottom left;
-  height: 320px;
+  background: url(image_path("night.jpg")) no-repeat bottom left;
+  height: 750px;
 }
 
 #four {
-  background: url(image_path("4-background.png")) no-repeat bottom left;
-  height: 320px;
+  background: url(image_path("stealing.jpg")) no-repeat bottom left;
+  height: 730px;
 }
+
+#five {
+  background: url(image_path("sadqueen.jpg")) no-repeat bottom left;
+  height: 730px;
+}
+#six {
+  background: url(image_path("coatatstore.jpg")) no-repeat bottom left;
+  height: 730px;
+}
+#seven {
+  background: url(image_path("seeing.jpg")) no-repeat bottom left;
+  height: 730px;
+}
+
+#eight {
+  background: url(image_path("last.jpg")) no-repeat bottom left;
+  height: 730px;
+}
+
 
 .right {
   margin-left: 500px;

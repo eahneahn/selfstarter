@@ -11,9 +11,12 @@
     <div style="color:grey!important;text-shadow:none!important;" class="main_content <%= "payment_options" if Settings.use_payment_options %>">
       <h3>Check out</h3>
 	  
-
 	  
-
+	<input style="color:grey!important;text-shadow:none!important;"checked="checked" type="radio" name="amountoption" value="set">$ 1<br>
+<input style="color:grey!important;text-shadow:none!important;" type="radio" name="amountoption" value="custom" id="customamt">$ <input id="customnum" type="text" placeholder="custom" name="amount">
+	  <span id="test">test</span>
+	  
+	  <br>  <br>
       <p style="color:grey!important; text-shadow:none!important;">
  <% if Settings.payment_processor == "stripe" %>
           All of your payment information will be secured and stored with Stripe.
@@ -40,9 +43,9 @@
         <%= render 'preorder/payment_options' %>
         <div class="checkout_controls">
           <div class="checkout_controls_wrapper">
-            <div class="checkout_controls_inner" style="color:grey!important;text-shadow:none!important;">
-				<input style="color:grey!important;text-shadow:none!important; width:10%!important;"checked="checked" type="radio" name="amountoption" value="set">$ 1<br>
-<input style="color:grey!important;text-shadow:none!important; width:10%!important;" type="radio" name="amountoption" value="custom" id="customamt">$ <input style=" color:grey!important;text-shadow:none!important; width:30%!important;" id="customnum" type="text" placeholder="custom" name="amount">
+            <div class="checkout_controls_inner">
+				<input style="color:grey!important;text-shadow:none!important;"checked="checked" type="radio" name="amountoption" value="set">$ 1<br>
+<input style="color:grey!important;text-shadow:none!important;" type="radio" name="amountoption" value="custom" id="customamt">$ <input id="customnum" type="text" placeholder="custom" name="amount">
 	
 			
               <%= email_field_tag "email", nil, :placeholder => "Email address", :required => "required", :id => "email" %>
@@ -51,7 +54,7 @@
                 <%= text_field_tag "cvv", nil, :placeholder => "CVV", :required => "required", :id => "cvv" %>
                 <%= text_field_tag "expires", nil, :placeholder => "Expires mm/yyyy", :required => "required", :id => "expires" %>
                 <%= hidden_field_tag :stripe_token %>
-                <%= submit_tag "Help!", :class => "blue_button", :id => "checkout_button" %>
+                <%= submit_tag "Order!", :class => "blue_button", :id => "checkout_button" %>
               <% else %>
                 <%= hidden_field_tag "preorder", true %>
                 <%= hidden_field_tag "quantity", params[:quantity] %>

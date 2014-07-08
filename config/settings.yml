@@ -12,17 +12,17 @@ project_goal: 100000
 # If you want to edit the FAQ, head over to app/views/preorder/homepage/_faqs.html.erb
 
 # This'll be both the page title (<title></title>) and the name in the header
-product_name: "Selfstarter"
+product_name: "Queen's Stolen Secret"
 
 # This will be used in sentences like Hooray You've just reserved product_description
 product_description: "a set of widgets"
 
 # An image showcasing your product -- it'll show up when you pin your product
 # It should be in app/assets/images
-product_image_path: "my-product-image.png"
+product_image_path: "product.png"
 
 # The message on the preorder page, Lockitron's is ""
-value_proposition: "Roll your own crowdfunding"
+value_proposition: "Help get new fur jacket for the bee queen!"
 
 # YouTube or Vimeo Video URL (The embed URL, without the query string options)
 # Replace /embed/ in your video url path with /v/ for video playback to work.
@@ -43,10 +43,22 @@ amazon_access_key: "YOUR_AMAZON_ACCESS_KEY"
 amazon_secret_key: "YOUR_AMAZON_SECRET_KEY"
 price: 	19.95
 
+# Stripe settings.  These can be overridden using STRIPE_API_KEY and STRIPE_PUBLIC_KEY environment variables
+stripe_api_key: "sk_test_5RQ3vLePPcVQqpKnne637Ibi"
+stripe_public_key: "pk_test_aReRACDYmZggHyPLsdImoJaa"
+ 
+ 
 # if use_payment_options is set to true, then a set of radio buttons will be displayed with various payment options.
 # There is a PaymentOption model for storing info about payment options.  To set up your payment options you should
 # put code in seeds.rb, then run rake db:seed
 use_payment_options: false
+
+# payment_processor determines the payment processor to use.
+# "amazon" => Amazon Payments
+# "stripe" => Stripe
+# Amazon is the default; anything that doesn't match another option will be treated as "amazon"
+#payment_processor: "amazon"
+payment_processor: "stripe"
 
 payment_description: "You really should change this text because people will see it on Amazon's order page!!!!!"
 
@@ -58,12 +70,12 @@ charge_limit: 25.00
 # Stats settings
 
 # On Lockitron, it's "backers"
-primary_stat: "backers"
+primary_stat: "helper"
 # This'll show up in the tweet as, "I'm backer number ..."
-primary_stat_verb: 'backer'
+primary_stat_verb: 'helper'
 
 # The 2nd call to action button, towards the middle-ish of the page
-middle_reserve_text: "Reserve Now"
+middle_reserve_text: "Help Now"
 
 # When the project should end
 expiration_date: <%= DateTime.now + 29 %>
@@ -74,21 +86,21 @@ progress_text: "Implemented"
 # Call to action section
 
 # On Lockitron, it's "First Batch Ships in March 2013"
-ships: "Ships...sometime"
+ships: " "
 
 # On Lockitron, it's "Reserve Now"
-call_to_action: "Reserve Now"
+call_to_action: "Help Now"
 # On Lockitron, this is "Only $149 for a limited time"
-price_human: "It costs money!"
+price_human: "Just a dollar!"
 
 # The paragraph below the price. You'd probably say something about how you're not going to charge them before it ships (so it's less risky).
-dont_give_them_a_reason_to_say_no: "You'll get this exact site. All you'll need to get started is a great product."
+dont_give_them_a_reason_to_say_no: "Can you help save the Bee Queen from sadness?"
 
 # Social Stuff
 facebook_app_id: "1234567890"
 # Tweets are prefixed with "I'm #{Settings.primary_stat} number X for #{Settings.product_name}"
 # Maybe mention something about your product vision -- e.g. "to replace keys with my phone"
-tweet_text: "to crowdfund"
+tweet_text: "to save the Bee Queen from sadness"
 
 # Google Analytics
 google_id: "1234567890"

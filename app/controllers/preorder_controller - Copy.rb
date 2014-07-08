@@ -6,7 +6,6 @@ class PreorderController < ApplicationController
    Stripe.api_key = ENV['STRIPE_API_KEY'] || Settings.stripe_api_key
   end
   
-
   
   def index
   end
@@ -23,29 +22,14 @@ class PreorderController < ApplicationController
       payment_option = PaymentOption.find(payment_option_id)
       price = payment_option.amount
     else
-	
 	#find price, check from radiobutton
-	#radio button check
-	
-	@amtdata = params[:amountoption]
-
-	if @amtdata=="set" then
-	#standard is chosen
-	
-	price=1.00
-	
-	
-	elsif @amtdata=="custom" then
-	
-	price=params[:amount].to_f
+	if conditionalcheckforcustomamount then
+	setitasprice
+	@data = params[:onedollar]
 	else
-	@amtdata="testtest"
-	#price=1.00
-	
+	dosomething
 	end
-	#end own addition
-	
-	   #  price = Settings.price
+	     price = Settings.price
     end
 
     @order = Order.prefill!(:name => Settings.product_name, :price => price, :user_id => @user.id, :payment_option => payment_option)
@@ -59,8 +43,7 @@ class PreorderController < ApplicationController
       client.default_card = card.id
 
       charge = Stripe::Charge.create(
-       :amount => (price * 100).to_i,
-		  # :amount => params[:customnum].to_f,
+         :amount => (price * 100).to_i,
         :currency => "usd",
          :customer => client.id,
         :description => Settings.payment_description
@@ -95,7 +78,6 @@ class PreorderController < ApplicationController
     end
     # "A" means the user cancelled the preorder before clicking "Confirm" on Amazon Payments.
     if params['status'] != 'A' && @order.present?
-
       redirect_to :action => :share, :uuid => @order.uuid
     else
       redirect_to root_url

@@ -1,69 +1,65 @@
 <div class="gray_background" id="faqs">
   <div class="wrapper clearfix">
-    <h4>Frequently Asked Questions</h4>
+    <h2>Frequently Asked Questions</h2>
     <ul>
       <li class=''>
         <details class=''>
-          <summary class=''>How do I setup Amazon Payments? TEST</summary>
-          <p>You'll need to <a href="https://payments.amazon.com/sdui/sdui/accountstatus">create an Amazon Seller Central account</a>. Afterwards, get your access key and secret key from the "Integration" tab on your AWS account. <a href="https://payments.amazon.com/sdui/sdui/helpTab/Checkout-by-Amazon/Advanced-Integration-Help/Using-Your-Access-Key">Click here for more info</a>.
+          <summary class=''>What's this about?</summary>
+          <p> I like to think of random things and draw pictures, and I need to make money for paying back university debt.
+ I thought this process didn't have to be depressing or boring. 
+ So I decided to make a story. I got by with little help from my friends to come up with it! Help us and help the Queen!</p>
+ 
           <br />
           <br />
-          Once you have your access key and secret key, head over to <code>config/settings.yml</code>. Change <code>amazon_access_key</code> and <code>amazon_secret_key</code> appropriately.</p>
+      </details>
+      </li>
+      <li>
+        <details class=''>
+          <summary>Who are you?</summary>
+          <p>  My name is Eunsoo Ahn. I go to University of Waterloo in Canada, and major in Economics. 
+		  I tried to transfer to Chicago institute of art, then a year later to Pratt institute, but I couldn’t afford their tuition! 
+		  It’s taking me forever to graduate because I keep taking time off school to do other things that seem interesting, like working and making art. 
+		  After undergrad, I am thinking about going into animation or architecture and one day running my own studio./p>
         </details>
       </li>
       <li>
         <details class=''>
-          <summary>Can I use another payments provider?</summary>
-          <p>Of course. We haven't built in support for other providers, but we recommend that you take a look at <a href="https://stripe.com">Stripe</a> or <a href="https://wepay.com">WePay</a>.</p>
+          <summary>Why don't you just get a job or come up with more “legit” tangible products?</summary>
+          <p>I’ve had every and any job you can name since I was young. But my passion is also in experimenting with technology and artistic pursuits.
+I met people who were resorting to drastic, unhealthy means to pay for school and it really made an impression on me. But I’ve also met people who had great imagination and creative talent. This made me want to experiment on more effective ways to raise money for school using your creative talent. </p>
         </details>
       </li>
       <li>
         <details class=''>
-          <summary>How do I edit the FAQ?</summary>
-          <p>The faq is a partial located in <code>app/views/preorder/homepage/_faq.html.erb</code> The <code>summary</code> tag is the title, the <code>p</code> is the body. Make sure to add an <code>li</code> tag for each FAQ entry.</p>
-        </details>
-      </li>
-      <li>
-        <details class=''>
-          <summary>How do I change around the images, product name, etc?</summary>
-          <p>The best way is in <code>config/settings.yml</code>. It has variables for several different parts, the video, the product name, the call to action button ("Fork Now"), and several more.
-          </p>
+          <summary>How does it work?</summary>
+          <p>You are joining to help the queen, and when we reach the goal, you will see the queen receiving her jacket, right here on this page!   You will be notified through email. While we go through this, you can follow at twitter to see our daily updates to see whats going on in the bee's land.  </p>
         </details>
       </li>
     </ul>
     <ul class='col2'>
       <li>
         <details class=''>
-          <summary>How do I change the CSS?</summary>
-          <p>Head over to <code>app/assets/stylesheets/variables.css.scss</code>. It makes it easy to change around the elements used throughout the HTML.
-          <br />
-          <br />
-          Alternatively, you can dive right into the CSS, have a look at <code>app/assets/stylesheets/main.css.scss</code>.</p>
+          <summary>Why a dollar as default payment?</summary>
+          <p>I wanted to make this something everyone can be involved, no matter who you are. 
+</p>
         </details>
       </li>
-      <li class=''>
+   
+     <li>
         <details class=''>
-          <summary>Why did you release this?</summary>
-          <p>Hardware startups are less welcome on Kickstarter than they were 6 months ago. We needed to roll our own kickstarter, so we did. Other hardware startups probably will too, so we made it easier for them by open sourcing our way of doing it.</p>
+          <summary>Credits and Thanks</summary>
+          <p>Photography : Blessie Maturan <br>
+Story: Sheryl Lee <br>
+Edit: Christine Nanteza <br>
+
+</p>
         </details>
       </li>
-      <li class=''>
-        <details class=''>
-          <summary class=''>What software stack does this use?</summary>
-          <p>It's a Ruby on Rails app that makes heavy use of SCSS, Kickstarter's wonderful <code>amazon_flex_pay</code> gem, and a hint of CoffeeScript.</p>
-        </details>
-      </li>
-      <li class=''>
-        <details class=''>
-          <summary class=''>How do I deploy it?</summary>
-          <p>We recommend using Heroku. We include a Procfile for you, so all you need to do is:
-          <p>
-            <p>Install the <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a></p>
-            <p>Run <code>heroku create</code> in Selfstarter's folder</code></p>
-            <p>Run <code>git push heroku master</code> in Selfstarter's folder</p>
-          </p>
-        </details>
-      </li>
+ 
+Any comments and questions welcome!<br><br>
+queensstolensecret@gmail.com
+
+  
     </ul>
   </div>
 </div>

@@ -103,8 +103,8 @@ details summary::-webkit-details-marker { display:none; content: ""; }
 
 h1 {
   margin: 0 auto;
-  margin-left: 380px;
-  width: 174px;
+  margin-left: 250px;
+  width: 500px;
   font-family: Helvetica;
   font-size: 42px;
   font-weight: bold;
@@ -130,9 +130,11 @@ h2 {
   margin-bottom: 50px;
 }
 
+h3{}
+
 h4 {
   font-size: 36px;
-  color: $h4_color;
+  color: white;
   margin-bottom: 30px;
 }
 
